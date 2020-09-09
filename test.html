@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      id="form_id"
+      method="post"
+      action=""
+      onsubmit="javascript:return validate('form_id','email');"
+    >
+      <input type="text" name="email" />
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      function validate(form_id, email) {
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var address = document.forms[form_id].elements[email].value;
+        if (reg.test(address) == false) {
+          alert("Введите корректный e-mail");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn to code by watching others</h1>
+    <p class="desc">
+      See how experienced developers solve problems in real-time. Watching
+      scripted tutorials is great, but understanding how developers think is
+      invaluable.
+    </p>
+    <div>
+      <button class="tryIt">
+        <span class="span_">Try it free 7 days</span> then $20/mo. thereafter
+      </button>
+      <div class="container">
+        <form class="form1" id="frm" action="/" method="post">
+          <input
+            class="upperInput"
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+          />
+          <p class="error" id="fname">First name cannot be empty</p>
+          <input type="text" name="lastName" placeholder="Last Name" /><br />
+          <p class="error" id="lname">Last name cannot be empty</p>
+          <input type="text" name="email" placeholder="Email" /><br />
+          <p class="error" id="email1">Email field can not be empty</p>
+          <!--<input type="text" name="address" placeholder="Address" /><br />
+        <p id="address"></p>-->
+          <input type="text" name="password" placeholder="Password" /><br />
+          <p class="error" id="password">Password cannot be empty</p>
+        </form>
+        <button class="btn" onclick="validFunc()">CLAIM YOUR FREE TRIAL</button>
+        <p class="term_services">
+          By clicking the button, you are agreeing to our
+          <a href="terms" class="terms">Terms and Services</a>
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.facebook.com/">Oleh Leochko</a>.
+      </p>
+    </footer>
+    <p id="demo"></p>
+  </body>
+</html>
+<script>
+  function validFunc() {
+    let x = document.forms["frm"];
+    var text = "";
+    var i;
+    for (i = 0; i < x.length; i++) {
+      text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    if (x.elements["firstName"].value.length == 0) {
+      document.getElementsByTagName("p")[1].removeAttribute("id");
+    }
+    if (x.elements["lastName"].value.length == 0) {
+      document.getElementsByTagName("p")[2].removeAttribute("id");
+    }
+    let email = x.elements["email"].value;
+    if (email.length == 0) {
+      document.getElementsByTagName("p")[3].removeAttribute("id");
+    }
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if (reg.test(email) == false) {
+      document.getElementById("email1").innerHTML =
+        "Looks like this is not an email";
+      document.getElementsByTagName("p")[3].removeAttribute("id");
+    }
+    if (x.elements["password"].value.length == 0) {
+      document.getElementsByTagName("p")[4].removeAttribute("id");
+    }
+  }
+</script>
