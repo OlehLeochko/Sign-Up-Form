@@ -38,7 +38,7 @@ a {
   /*right: 160px;*/
   position: relative;
   left: 650px;
-  width: 500px;
+  width: 540px;
   text-align: center;
   border-radius: 6px;
   background-image: none;
@@ -56,7 +56,7 @@ a {
   position: relative;
   left: 650px;
   top: 100px;
-  width: 500px;
+  width: 540px;
   background-color: white;
   background-image: none;
   border-radius: 6px;
@@ -78,8 +78,8 @@ a {
 input {
   padding-left: 30px;
   font-size: 12px;
-  width: 400px;
-  height: 40px;
+  width: 450px;
+  height: 50px;
   background-image: none;
   background-color: white;
 
@@ -139,8 +139,8 @@ input:focus {
   display: block;
   /* top: 100px;*/
   left: 650px;
-  width: 400px;
-  height: 40px;
+  width: 450px;
+  height: 50px;
   border-radius: 6px;
   outline: none;
   border: none;
@@ -148,7 +148,7 @@ input:focus {
   color: white;
   box-shadow: 0px 3px 0px 0px hsl(154, 47%, 40%);
   margin-top: 15px;
-  margin-left: 50px;
+  margin-left: 45px;
 }
 .btn:hover {
   box-shadow: 0 0 4px hsl(154, 100%, 62%);
@@ -156,13 +156,14 @@ input:focus {
 }
 .term_services {
   margin-top: 20px;
-  font-size: 12px;
+  text-align: center;
+  font-size: 9px;
   background-color: white;
   color: grey;
   background-image: none;
   border-radius: 6px;
   margin-left: 50px;
-  margin-bottom: 100px;
+  padding-bottom: 50px;
 }
 .terms {
   color: hsl(0, 100%, 74%);
