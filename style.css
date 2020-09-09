@@ -9,23 +9,22 @@ body {
   font-size: 16px;
 }
 h1 {
-  display: block;
-  position: absolute;
-  top: 200px;
   font-size: 40px;
   left: 160px;
-  max-width: 400px;
   font-weight: bold 700;
   color: white;
 }
 a {
   text-decoration: none;
 }
-.desc {
+.article {
+  display: block;
   position: absolute;
-  top: 365px;
-  left: 160px;
-  max-width: 400px;
+  top: 200px;
+  left: 90px;
+  width: 500px;
+}
+.desc {
   color: white;
 }
 
@@ -163,7 +162,7 @@ input:focus {
   background-image: none;
   border-radius: 6px;
   margin-left: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .terms {
   color: hsl(0, 100%, 74%);
@@ -177,4 +176,26 @@ footer {
   top: 150px;
   color: white;
   font-weight: 400;
+}
+@media screen and(max-width: 800px) {
+  /*.article {
+    /* position: relative;
+    display: block;
+    text-align: center;
+  }*/
+  h1 {
+    display: block;
+    width: 100%;
+  }
+  .desc {
+    display: block;
+  }
+  .tryIt {
+    display: block;
+  }
+  .container {
+    display: block;
+    margin-top: 800px;
+    margin-left: 50px;
+  }
 }
