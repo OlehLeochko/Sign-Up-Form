@@ -30,8 +30,9 @@
     </style>
   </head>
   <body>
-    <div class="article">
-      <h1>Learn to code by watching others</h1>
+    <div class="row">
+      <div class="col-6">
+      <h1 class="header"">Learn to code by watching others</h1>
       <p class="desc">
         See how experienced developers solve problems in real-time. Watching
         scripted tutorials is great, but understanding how developers think is
@@ -39,7 +40,8 @@
       </p>
     </div>
 
-    <div>
+    <div class="col-6 right">
+      
       <button class="tryIt">
         <span class="span_">Try it free 7 days</span> then $20/mo. thereafter
       </button>
@@ -66,15 +68,16 @@
           By clicking the button, you are agreeing to our
           <a href="terms" class="terms">Terms and Services</a>
         </p>
-      </div>
     </div>
-
+    </div>
+    </div>
+    
     <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/OlehLeochko">Oleh Leochko</a>.
+        >. Coded by <a href="https://github.com/OlehLeochko">@Oleh Leochko</a>.
       </p>
     </footer>
     <p id="demo"></p>
@@ -87,8 +90,8 @@
     var i;
     /*for (i = 0; i < x.length; i++) {
       text += x.elements[i].value + "<br>";
-    }*/
-    document.getElementById("demo").innerHTML = text;
+    }
+    document.getElementById("demo").innerHTML = text;*/
     if (x.elements["firstName"].value.length == 0) {
       document.getElementsByTagName("p")[1].removeAttribute("id");
     }
